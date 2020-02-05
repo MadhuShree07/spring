@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.xworkz.farmerland.app.Land" id="land">
+		<constructor-arg value="dry" />
+		<constructor-arg value="400000.0" />
+		<constructor-arg value="true" />
+	</bean>
+
+	<bean class="com.xworkz.farmerland.app.Farmer" id="farmer">
+		<property name="name" value="soumya" />
+		<property name="acres" value="4" />
+		<property name="location" value="Uttar Pradesh" />
+		<property name="cropType" value="wheat" />
+		<property name="land" ref="land" />
+	</bean>
+</beans>
